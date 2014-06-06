@@ -1,23 +1,23 @@
 {
-    "name": "endroid/prediction-io",
-    "description": "Endroid PredictionIO Client",
-    "keywords": ["endroid", "prediction", "io", "predictionio"],
-    "homepage": "https://github.com/endroid/PredictionIO",
+    "name": "bratao/prediction-io",
+    "description": "Laravel PredictionIO Client",
+    "keywords": ["bratao","laravel", "prediction", "io", "predictionio"],
+    "homepage": "https://github.com/bratao/PredictionIO",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "Jeroen van den Enden",
-            "email": "info@endroid.nl",
-            "homepage": "http://endroid.nl/"
+            "name": "Bruno Cabral",
+            "email": "bruno.cabral@ufba.br",
+            "homepage": "http://www.brunocabral.com.br"
         }
     ],
     "require": {
         "php": ">=5.3.0",
-        "predictionio/predictionio": "~0.6"
+        "predictionio/predictionio": "~0.7"
     },
     "autoload": {
-        "psr-0": { "Endroid": "src/" }
+        "psr-0": { "Bratao": "src/" }
     },
     "extra": {
         "branch-alias": {
