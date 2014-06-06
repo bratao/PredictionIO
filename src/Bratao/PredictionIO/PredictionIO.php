@@ -7,7 +7,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Endroid\PredictionIO;
+namespace Bratao\PredictionIO;
 
 use Buzz\Browser;
 use Buzz\Client\MultiCurl;

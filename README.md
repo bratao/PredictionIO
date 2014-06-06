@@ -4,7 +4,7 @@ Laravel PredictionIO
 *Based on [endroid](http://endroid.nl/)*
 
 
-The Endroid PredictionIO library provides a client which offers easy access to a PredictionIO recommendation engine.
+The Laravel PredictionIO library provides a client which offers easy access to a PredictionIO recommendation engine.
 PredictionIO is an open source machine learning server for software developers to create predictive features, such as
 personalization, recommendation and content discovery.
 
@@ -13,18 +13,16 @@ register actions between these users and items and retrieve recommendations dedu
 [`PredictionIO`](http://prediction.io/) recommendation engine. Applications range from showing recommended products in a
 web shop to discovering relevant experts in a social collaboration network.
 
-## Requirements
 
-* Symfony
-* Dependencies:
- * [`PredictionIO-PHP-SDK`](https://github.com/PredictionIO/PredictionIO-PHP-SDK)
-
+## Installation
+Add 'Bratao\PredictionIO\PredictionServiceProvider' and 'Prediction'      => 'Bratao\PredictionIO\Facade', to app.php
+ 
 ## Usage
 
 ```php
 <?php
 
-$client = new Endroid\PredictionIO\PredictionIO($appKey, $apiUrl);
+$client = PredictionIO($appKey, $apiUrl);
 
 // populate with users, items and actions
 $client->createUser($userId);
@@ -36,15 +34,6 @@ $recommendations = $client->getRecommendations($userId, $engine, $count);
 $similarItems = $client->getSimilarItems($itemId, $engine, $count);
 
 ```
-
-## Vagrant box
-
-PredictionIO provides a [`Vagrant box`](http://docs.prediction.io/current/installation/install-predictionio-with-virtualbox-vagrant.html)
-containing an out-of-the-box PredictionIO server.
-
-## Symfony
-
-You can use [`EndroidPredictionIOBundle`](https://github.com/endroid/EndroidPredictionIOBundle) to enable this service in your Symfony application.
 
 ## License
 
