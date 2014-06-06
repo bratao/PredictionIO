@@ -15,7 +15,10 @@ web shop to discovering relevant experts in a social collaboration network.
 
 
 ## Installation
-Add 'Bratao\PredictionIO\PredictionServiceProvider' and 'Prediction'      => 'Bratao\PredictionIO\Facade', to app.php
+Add "bratao/prediction-io": "1.*@dev" to composer.json.
+
+Add 'Bratao\PredictionIO\PredictionServiceProvider' and 
+'Prediction'      => 'Bratao\PredictionIO\Facade', to app.php
  
 ## Usage
 
