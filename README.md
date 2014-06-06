@@ -22,16 +22,13 @@ Add 'Bratao\PredictionIO\PredictionServiceProvider' and 'Prediction'      => 'Br
 ```php
 <?php
 
-$client = PredictionIO($appKey, $apiUrl);
-
 // populate with users, items and actions
-$client->createUser($userId);
-$client->createItem($itemId);
-$client->recordAction($userId, $itemId, 'view');
+Predict::createItem($itemId);
+Predict::recordAction($userId, $itemId, 'view');
 
 // get recommendations and similar items
-$recommendations = $client->getRecommendations($userId, $engine, $count);
-$similarItems = $client->getSimilarItems($itemId, $engine, $count);
+$recommendations = Predict::getRecommendations($userId, $engine, $count);
+$similarItems = Predict::getSimilarItems($itemId, $engine, $count);
 
 ```
 
