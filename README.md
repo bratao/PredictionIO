@@ -1,11 +1,8 @@
-Endroid PredictionIO
+Laravel PredictionIO
 ====================
 
-*By [endroid](http://endroid.nl/)*
+*Based on [endroid](http://endroid.nl/)*
 
-[![Build Status](https://secure.travis-ci.org/endroid/PredictionIO.png)](http://travis-ci.org/endroid/PredictionIO)
-[![Latest Stable Version](https://poser.pugx.org/endroid/prediction-io/v/stable.png)](https://packagist.org/packages/endroid/prediction-io)
-[![Total Downloads](https://poser.pugx.org/endroid/prediction-io/downloads.png)](https://packagist.org/packages/endroid/prediction-io)
 
 The Endroid PredictionIO library provides a client which offers easy access to a PredictionIO recommendation engine.
 PredictionIO is an open source machine learning server for software developers to create predictive features, such as
