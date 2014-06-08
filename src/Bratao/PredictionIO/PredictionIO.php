@@ -1,7 +1,7 @@
 <?php
 
 /*
- * (c) Jeroen van den Enden <info@endroid.nl>
+ * (c) Bruno Cabral <bruno.cabral -at- ufba.br >
  *
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
@@ -55,6 +55,21 @@ class PredictionIO
 
         return $response;
     }
+	
+	/**
+     * Delete an user.
+     *
+     * @param $userId
+     * @return mixed
+     */
+    public function deleteUser($userId)
+    {
+        $command = $this->client->getCommand('delete_user', array('pio_iid' => $userId));
+        $response = $this->client->execute($command);
+
+        return $response;
+    }
+	
 
     /**
      * Create an item.
@@ -70,6 +85,21 @@ class PredictionIO
 
         return $response;
     }
+	
+	/**
+     * Delete an item.
+     *
+     * @param $itemId
+     * @return mixed
+     */
+    public function deleteItem($itemId)
+    {
+        $command = $this->client->getCommand('delete_item', array('pio_iid' => $itemId));
+        $response = $this->client->execute($command);
+
+        return $response;
+    }
+
 
     /**
      * Record a user action on an item.

@@ -30,6 +30,10 @@ Predict::createUser($userId);
 Predict::createItem($itemId);
 Predict::recordAction($userId, $itemId, 'view');
 
+//Delete a user or a item
+Predict::deleteUser($userId);
+Predict::deleteItem($itemId);
+
 // get recommendations and similar items
 $recommendations = Predict::getRecommendations($userId, $engine, $count);
 $similarItems = Predict::getSimilarItems($itemId, $engine, $count);
