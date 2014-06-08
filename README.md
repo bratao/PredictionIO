@@ -26,6 +26,7 @@ Add 'Bratao\PredictionIO\PredictionServiceProvider' and
 <?php
 
 // populate with users, items and actions
+Predict::createUser($userId);
 Predict::createItem($itemId);
 Predict::recordAction($userId, $itemId, 'view');
 

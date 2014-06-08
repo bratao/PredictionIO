@@ -11,4 +11,4 @@ script: phpunit -c phpunit.xml.dist
 
 notifications:
   email:
-    - info@endroid.nl
+    - bruno.cabral@ufba.br

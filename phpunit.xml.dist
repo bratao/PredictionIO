@@ -3,12 +3,12 @@
 <phpunit bootstrap="./vendor/autoload.php" colors="true">
     <testsuites>
         <testsuite name="PredictionIO Test Suite">
-            <directory suffix="Test.php">./tests/Endroid/</directory>
+            <directory suffix="Test.php">./tests/Bratao/</directory>
         </testsuite>
     </testsuites>
     <filter>
         <whitelist>
-            <directory suffix=".php">./src/Endroid/</directory>
+            <directory suffix=".php">./src/Bratao/</directory>
         </whitelist>
     </filter>
 </phpunit>
