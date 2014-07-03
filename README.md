@@ -15,28 +15,49 @@ web shop to discovering relevant experts in a social collaboration network.
 
 
 ## Installation
-Add "bratao/prediction-io": "1.*@dev" to composer.json.
+* Install library and dependencies:
 
-Add 'Bratao\PredictionIO\PredictionServiceProvider' and 
-'Prediction'      => 'Bratao\PredictionIO\Facade', to app.php
- 
+```bash
+$ php composer require "bratao/prediction-io:1.*@dev"
+```
+
+* Add a **provider** in `app/config/app.php`:
+
+```php
+    'Bratao\PredictionIO\PredictionServiceProvider'
+```
+
+* Add an **alias** in `app/config/app.php`:
+
+```php
+    'Prediction'      => 'Bratao\PredictionIO\Facade',
+```
+
+* Define your [PredictionIO API endpoint](http://docs.prediction.io/current/tutorials/quickstart-php.html#add-your-app-to-predictionio) in `app/config/services.php`:
+
+```php
+	'predictionio' => array(
+		'api' => 'http://localhost:8000/',
+		'key' => '0250b3f85ce33284f77c77f36b41010ef2c4fc5c',
+	),
+```
 ## Usage
 
 ```php
 <?php
 
 // populate with users, items and actions
-Predict::createUser($userId);
-Predict::createItem($itemId);
-Predict::recordAction($userId, $itemId, 'view');
+Prediction::createUser($userId);
+Prediction::createItem($itemId);
+Prediction::recordAction($userId, $itemId, 'view');
 
 //Delete a user or a item
-Predict::deleteUser($userId);
-Predict::deleteItem($itemId);
+Prediction::deleteUser($userId);
+Prediction::deleteItem($itemId);
 
 // get recommendations and similar items
-$recommendations = Predict::getRecommendations($userId, $engine, $count);
-$similarItems = Predict::getSimilarItems($itemId, $engine, $count);
+$recommendations = Prediction::getRecommendations($userId, $engine, $count);
+$similarItems = Prediction::getSimilarItems($itemId, $engine, $count);
 
 ```
 

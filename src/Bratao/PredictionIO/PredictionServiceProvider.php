@@ -30,7 +30,7 @@ class PredictionServiceProvider extends ServiceProvider {
     {
         $this->app['predictionio'] = $this->app->share(function($app)
         {
-            return new PredictionIO;
+            return new PredictionIO(\Config::get('services.predictionio.key'), \Config::get('services.predictionio.api'));
         });
     }
 
