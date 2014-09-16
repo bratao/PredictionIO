@@ -51,6 +51,10 @@ Prediction::createUser($userId);
 Prediction::createItem($itemId);
 Prediction::recordAction($userId, $itemId, 'view');
 
+//Get a User or a Item
+$item = Prediction::getUser($userId);
+$user = Prediction::getItem($itemId);
+
 //Delete a user or a item
 Prediction::deleteUser($userId);
 Prediction::deleteItem($itemId);
