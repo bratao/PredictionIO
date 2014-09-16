@@ -55,6 +55,20 @@ class PredictionIO
 
         return $response;
     }
+    
+    /**
+     * Get a user
+     * 
+     * @param $userID
+     * @return mixed
+     */
+    public function getUser($userId)
+    {
+        $commanbd = $this->client->getCommand('get_user', array('pio_uid' => $userId));
+        $response = $this->client->execute($command);
+        
+        return $response;
+    }
 	
 	/**
      * Delete an user.
@@ -83,6 +97,20 @@ class PredictionIO
         $command = $this->client->getCommand('create_item', array('pio_iid' => $itemId, 'pio_itypes' => $itemTypes));
         $response = $this->client->execute($command);
 
+        return $response;
+    }
+    
+    /**
+     * Get an item.
+     * 
+     * @param $itemId
+     * @return mixed
+     */
+    public function getItem($itemId)
+    {
+        $command = $this->client->getCommand('get_item', array('pio_iid' => $itemId));
+        $response = $this->client->execute($command);
+        
         return $response;
     }
 	
