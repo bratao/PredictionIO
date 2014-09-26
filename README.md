@@ -18,7 +18,7 @@ web shop to discovering relevant experts in a social collaboration network.
 * Install library and dependencies:
 
 ```bash
-$ php composer require "bratao/prediction-io:1.*@dev"
+$ composer require "bratao/prediction-io:1.*@dev"
 ```
 
 * Add a **provider** in `app/config/app.php`:
